@@ -14,7 +14,7 @@ class Program
             Console.WriteLine("2. Buscar elemento en matriz");
             Console.WriteLine("3. Pesos de personas");
             Console.WriteLine("4. Promedio de cursos");
-            Console.WriteLine("5. Uueldos de empleados");
+            Console.WriteLine("5. Sueldos de empleados");
             Console.WriteLine("6. Salir");
             
             try

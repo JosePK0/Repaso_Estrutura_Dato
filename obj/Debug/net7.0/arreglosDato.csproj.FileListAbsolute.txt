@@ -26,3 +26,4 @@ C:\Users\j_ant\OneDrive\Escritorio\arreglosDato\obj\Debug\net7.0\refint\arreglos
 C:\Users\j_ant\OneDrive\Escritorio\arreglosDato\obj\Debug\net7.0\arreglosDato.pdb
 C:\Users\j_ant\OneDrive\Escritorio\arreglosDato\obj\Debug\net7.0\arreglosDato.genruntimeconfig.cache
 C:\Users\j_ant\OneDrive\Escritorio\arreglosDato\obj\Debug\net7.0\ref\arreglosDato.dll
+C:\Users\j_ant\OneDrive\Escritorio\arreglosDato\obj\Debug\net7.0\arreglosDato.sourcelink.json

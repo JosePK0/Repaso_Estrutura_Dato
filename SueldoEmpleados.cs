@@ -24,42 +24,57 @@ public class SueldoEmpleados
     }
 
   
-    public void IngresarDatos()
+public void IngresarDatos()
+{
+    for (int i = 0; i < empleados.Length; i++)
     {
-        for (int i = 0; i < empleados.Length; i++)
+        Console.WriteLine($"\n--- Ingreso de datos para el empleado {i + 1} ---");
+
+        bool nombreValido = false;
+        while (!nombreValido)
         {
-            Console.WriteLine($"\n--- Ingreso de datos para el empleado {i + 1} ---");
             Console.WriteLine("Ingrese el nombre del empleado:");
+            string nombre = Console.ReadLine();
 
-            empleados[i] = Console.ReadLine();
-
-            for (int j = 0; j < 5; j++)
+            if (string.IsNullOrWhiteSpace(nombre))
             {
-                bool sueldoValido = false;
-                while (!sueldoValido)
+                Console.WriteLine("Error: El nombre no puede estar vacío o contener solo espacios. Intente nuevamente.");
+            }
+            else
+            {
+                empleados[i] = nombre;
+                nombreValido = true;
+            }
+        }
+
+        for (int j = 0; j < 5; j++)
+        {
+            bool sueldoValido = false;
+            while (!sueldoValido)
+            {
+                Console.WriteLine($"Ingrese el sueldo de la quincena {j + 1} para {empleados[i]}:");
+                try
                 {
-                    Console.WriteLine($"Ingrese el sueldo de la quincena {j + 1} para {empleados[i]}:");
-                    try
+                    double sueldo = double.Parse(Console.ReadLine());
+                    if (sueldo >= 0)
                     {
-                        double sueldo = double.Parse(Console.ReadLine());
-                        if (sueldo >= 0)
-                        {
-                            sueldos[i, j] = sueldo;
-                            sueldoValido = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("El sueldo debe ser un valor positivo. Intente nuevamente.");
-                        }
+                        sueldos[i, j] = sueldo;
+                        sueldoValido = true;
                     }
-                    catch
+                    else
                     {
-                        Console.WriteLine("Error: Ingrese un valor numérico válido.");
+                        Console.WriteLine("El sueldo debe ser un valor positivo. Intente nuevamente.");
                     }
+                }
+                catch
+                {
+                    Console.WriteLine("Error: Ingrese un valor numérico válido.");
                 }
             }
         }
     }
+}
+
 
   
     public void MostrarTotalSueldosPagados()
