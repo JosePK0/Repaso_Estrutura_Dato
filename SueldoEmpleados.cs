@@ -92,6 +92,8 @@ public void IngresarDatos()
         Console.WriteLine($"\nEl total pagado en sueldos a todos los empleados en los últimos 5 meses es: {totalPagado}");
     }
 
+
+    
     public void EmpleadoConMayorIngresoAcumulado()
     {
         double maxIngreso = 0;
