@@ -92,7 +92,6 @@ public void IngresarDatos()
         Console.WriteLine($"\nEl total pagado en sueldos a todos los empleados en los últimos 5 meses es: {totalPagado}");
     }
 
-    // Identifica al empleado con mayor ingreso acumulado
     public void EmpleadoConMayorIngresoAcumulado()
     {
         double maxIngreso = 0;
